@@ -1,48 +1,45 @@
 ﻿//Arrays
 //Array Insertions and Deletions
 
-// Inserting at the end of an Array O(1)
+/* logically these deletions removes the number from the array however it's still saved in the array's memory 
+ * since an array is at a fixed length */
 
-int[] intArray = new int[10];
+// Delete from end of array
+int[] intArray = new int[9];
 
-// Make a variable to keep the length because .Length is based off capacity and does not track the actual index
 int length = 0;
 
-//This adds data for us
-for (int i = 0; i < 8; i++)
+for(int i = 0; i < 6; i++)
 {
-    //1 is optional
-    intArray[length] = i + 1;
-    length++; // iterate so we put values inside the array and keep track of the length
+    intArray[length] = i;
+    length++;
 }
 
-/* insertion for the end of the array */
-//intArray[length] = 8;
-//length++;
+//length--; //this is for the end of the array
 
 
-/* ============ Inserting at the start of an Array ============ */
-/* for (int i = 3; i >= 0; i--)
+// Delete from the beginning of the array
+/* for(int i = 1; i < length; i++)
 {
-    // this is moving over all the values in the array
-    intArray[i + 1] = intArray[i];
+    //use negative 1 if you want to move the value(s) to the left, positive 1 for to the right
+    intArray[i - 1] = intArray[i];
 }
 
-intArray[0] = 20;
-
-// this is so we can see the 20 get assigned before the Watch window closes
-int value = 0;
-
+length--;
 */
 
 
-/* ============ Inserting anywhere in the array ============ */
-for (int i = length; i >= 2; i--)
+// Deleting from anywhere in array
+for(int i = 2; i < length; i++)
 {
-    //Shift each element one position to the right
-    intArray[i + 1] = intArray[i];
+    intArray[i - 1] = intArray[i];
 }
 
-intArray[2] = 8;
+length--;
 
-int value = 0;
+
+//this is to view the output for all of the loops
+for (int i = 0; i < length; i++)
+{
+    Console.WriteLine(intArray[i]);
+}
