@@ -37,7 +37,7 @@ int value = 0;
 
 
 /* ============ Inserting anywhere in the array ============ */
-for (int i = 4; i >= 2; i--)
+for (int i = length; i >= 2; i--)
 {
     //Shift each element one position to the right
     intArray[i + 1] = intArray[i];
