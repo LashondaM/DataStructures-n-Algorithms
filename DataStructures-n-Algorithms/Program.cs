@@ -1,45 +1,92 @@
 ﻿//Arrays
-//Array Insertions and Deletions
+//Array Insertions and Deletions Testing My Knowledge
 
-/* logically these deletions removes the number from the array however it's still saved in the array's memory 
- * since an array is at a fixed length */
-
-// Delete from end of array
-int[] intArray = new int[9];
+/*
+// Insert at the end of Array
+int[] veggieRay = new int[10];
 
 int length = 0;
 
-for(int i = 0; i < 6; i++)
+for(int i = 0; i < 7; i++)
 {
-    intArray[length] = i;
+    veggieRay[length] = i + 1;
     length++;
 }
 
-//length--; //this is for the end of the array
+//veggieRay[length] = 12;
+
+// throw away variable to see watch window all the way
+//int protein = 0;
 
 
-// Delete from the beginning of the array
-/* for(int i = 1; i < length; i++)
+
+// Insert at the beginning of Array
+
+//for (int i = 3; i >= 0; i--)
+//{
+//    veggieRay[i + 1] = veggieRay[i];
+//}
+
+//veggieRay[0] = 88;
+
+//int protein = 0;
+
+
+
+// Insert Anywhere in the Array
+
+for (int i = length; i >= 2; i--)
 {
-    //use negative 1 if you want to move the value(s) to the left, positive 1 for to the right
-    intArray[i - 1] = intArray[i];
+    veggieRay[i + 1] = veggieRay[i];
 }
 
-length--;
+veggieRay[2] = 24;
+
+int value = 0;
+
+*/
+
+// challenge with no help ===================
+
+// Insert at the end of Array
+
+int[] arr = new int[10];
+
+int length = 0;
+
+for(int i = 0; i < 8; i++)
+{
+    arr[length] = i + 1;
+    length++;
+}
+
+//arr[length] = 13;
+
+//int b = 0;
+
+
+
+// Insert at the Beginning of the Array
+
+/*
+for(int i = 3; i >= 0; i--)
+{
+    arr[i + 1] = arr[i];
+}
+
+arr[0] = 800;
+
+int value = 0;
 */
 
 
-// Deleting from anywhere in array
-for(int i = 2; i < length; i++)
+// Insert anywhere in the Array
+
+for(int i = length; i >= 4; i--)
 {
-    intArray[i - 1] = intArray[i];
+    arr[i + 1] = arr[i];
 }
 
-length--;
+arr[4] = 24;
 
-
-//this is to view the output for all of the loops
-for (int i = 0; i < length; i++)
-{
-    Console.WriteLine(intArray[i]);
-}
+int stuff = 0;
