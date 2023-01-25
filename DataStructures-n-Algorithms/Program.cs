@@ -1,92 +1,40 @@
-﻿//Arrays
-//Array Insertions and Deletions Testing My Knowledge
+﻿// Delete from end of Array
 
-/*
-// Insert at the end of Array
-int[] veggieRay = new int[10];
+int[] lays = new int[9];
 
 int length = 0;
 
 for(int i = 0; i < 7; i++)
 {
-    veggieRay[length] = i + 1;
+    lays[length] = i;
     length++;
 }
 
-//veggieRay[length] = 12;
-
-// throw away variable to see watch window all the way
-//int protein = 0;
+//length--;
 
 
+// Delete from beginning of Array
 
-// Insert at the beginning of Array
-
-//for (int i = 3; i >= 0; i--)
+//for(int i = 1; i < length; i++)
 //{
-//    veggieRay[i + 1] = veggieRay[i];
+//    lays[i - 1] = lays[i];
 //}
 
-//veggieRay[0] = 88;
-
-//int protein = 0;
+//length--;
 
 
+// Delete from Anywhere in Array
 
-// Insert Anywhere in the Array
-
-for (int i = length; i >= 2; i--)
+for(int i = 3; i < length; i++)
 {
-    veggieRay[i + 1] = veggieRay[i];
+    lays[i - 1] = lays[i];
 }
 
-veggieRay[2] = 24;
+length--;
 
-int value = 0;
 
-*/
 
-// challenge with no help ===================
-
-// Insert at the end of Array
-
-int[] arr = new int[10];
-
-int length = 0;
-
-for(int i = 0; i < 8; i++)
+for(int i = 0; i < length; i++)
 {
-    arr[length] = i + 1;
-    length++;
+    Console.WriteLine(lays[i]);
 }
-
-//arr[length] = 13;
-
-//int b = 0;
-
-
-
-// Insert at the Beginning of the Array
-
-/*
-for(int i = 3; i >= 0; i--)
-{
-    arr[i + 1] = arr[i];
-}
-
-arr[0] = 800;
-
-int value = 0;
-*/
-
-
-// Insert anywhere in the Array
-
-for(int i = length; i >= 4; i--)
-{
-    arr[i + 1] = arr[i];
-}
-
-arr[4] = 24;
-
-int stuff = 0;
