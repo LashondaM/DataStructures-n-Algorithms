@@ -1,40 +1,18 @@
-﻿// Delete from end of Array
+﻿// Linear Search Array
 
-int[] lays = new int[9];
+int[] array = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
-int length = 0;
-
-for(int i = 0; i < 7; i++)
+//Key means what value are we searching for
+bool LinearSearch(int[] array, int key)
 {
-    lays[length] = i;
-    length++;
+    for(int i = 0; i < array.Length; i++)
+    {
+        if(array[i] == key)
+        {
+            return true;
+        }
+    }
+    return false;
 }
 
-//length--;
-
-
-// Delete from beginning of Array
-
-//for(int i = 1; i < length; i++)
-//{
-//    lays[i - 1] = lays[i];
-//}
-
-//length--;
-
-
-// Delete from Anywhere in Array
-
-for(int i = 3; i < length; i++)
-{
-    lays[i - 1] = lays[i];
-}
-
-length--;
-
-
-
-for(int i = 0; i < length; i++)
-{
-    Console.WriteLine(lays[i]);
-}
+Console.WriteLine(LinearSearch(array, 4));
